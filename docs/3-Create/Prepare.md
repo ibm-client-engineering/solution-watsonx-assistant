@@ -39,13 +39,13 @@ title: Prepare
 1. You'll land on the "Configure" tab. 
 1. Enter the name of the company or organization that NeuralSeek will be generating answers for. Click "Next"
 1. Input Watson Discovery KnowledgeBase details. Test connection by clicking "Test". Once tested, click "Next".
-    ```bash
-    # Where to get credentials
-    - Discovery Service Url: within IBM Cloud -> resource list -> Watson Discovery Instance -> Manage -> Credentials
-    - Discovery API Key: within IBM Cloud -> resource list -> Watson Discovery Instance -> Manage -> Credentials
-    - Discovery Project ID: within Watson Discovery: Upper left Hamburger icon -> Integrate and deploy -> 
+    :::info
+    **Where to get credentials**
+    - **Discovery Service Url**: within IBM Cloud -> resource list -> Watson Discovery Instance -> Manage -> Credentials
+    - **Discovery API Key**: within IBM Cloud -> resource list -> Watson Discovery Instance -> Manage -> Credentials
+    - **Discovery Project ID**: within Watson Discovery: Upper left Hamburger icon -> Integrate and deploy -> 
     API Information
-    ```
+    :::
 1. For Virtual Agent Type, select "Watson Assistant Type". Click "Next". Click "Next". 
 1. Navigate to "Seek" tab. Test NeuralSeek with e.g. "What products or services do you offer?"
 
@@ -71,7 +71,7 @@ credentials for LLM
     
 
 ### 2.2 Setup WatsonX and integrate with Watson Discovery <a name="setup-WX-WD"></a>
-#### Higelevel Steps
+#### High-level Steps
 1. Create a new Watson Assistant
 1. [Create Watson Discovery custom extension](#2-create-watson-discovery-custom-extension)
 1. [Create WatsonX custom extension](#3-create-watsonx-custom-extension)
@@ -108,11 +108,13 @@ Upload Actions:
 1. Navigate to "Actions" page, click "Global Settings" icon on the upper right corner
 1. Navigate to Upload/Download tab, upload the downloaded JSON file [discovery-watsonx-actions.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-conversational-search/discovery-watsonx-actions.json) onto the tab or click to select a file from your local system, then click "Upload", and "Uplaod and replace".
 3. within the Actions page, navigate to "Actions / Variables / Created by you". Set `discovery_project_id` and `watsonx_project_id` session variable
-    #### Where to get credentials
+    :::info
+    **Where to get credentials**
     - **discovery_project_id**: within Watson Discovery: Upper left Hamburger icon -> Integrate and deploy -> API Information
     - **watsonx_project_id**: 
         - Go to [WatsonX Platform](https://dataplatform.cloud.ibm.com/wx/home?context=wx)
         - Projects (click on project)-> Manage -> General -> Details -> Project ID
+    :::
 4. You're all set. Navigate to "Preview" to test the integration!
 5. To add source link to the response, We need to configure two actions.
     1.  Navigate to "Seach" action
