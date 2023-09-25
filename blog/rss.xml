@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>IBM Client Engineering Blog</title>
-        <link>https://ibm-client-engineering.github.io/solution-name/blog</link>
+        <link>https://ibm-client-engineering.github.io/solution-ithelpdesk-watsonx/blog</link>
         <description>IBM Client Engineering Blog</description>
-        <lastBuildDate>Thu, 01 Jun 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 19 Sep 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
             <title><![CDATA[Log - Sprint 1 🛫]]></title>
-            <link>https://ibm-client-engineering.github.io/solution-name/blog/flight-log-4</link>
-            <guid>https://ibm-client-engineering.github.io/solution-name/blog/flight-log-4</guid>
-            <pubDate>Thu, 01 Jun 2023 00:00:00 GMT</pubDate>
+            <link>https://ibm-client-engineering.github.io/solution-ithelpdesk-watsonx/blog/flight-log-1</link>
+            <guid>https://ibm-client-engineering.github.io/solution-ithelpdesk-watsonx/blog/flight-log-1</guid>
+            <pubDate>Tue, 19 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Flight Log of Co-Creation Activities]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="work-in-progress">Work in Progress<a href="#work-in-progress" class="hash-link" aria-label="Direct link to Work in Progress" title="Direct link to Work in Progress">​</a></h2><ul><li>Today the team discussed how to efficiently setup the Watsonx.ai extension and Watson Discovery extension.</li><li>The team then walked through how we setup prompt engineering within Watsonx Assistant. </li><li>The team then walked through a demo of the setup and integration of Watsonx Assistant and ServiceNow.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="currently-tracking">Currently Tracking<a href="#currently-tracking" class="hash-link" aria-label="Direct link to Currently Tracking" title="Direct link to Currently Tracking">​</a></h2><ul><li>The team is working on pushing solution documentation to GitHub.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps">​</a></h2><ul><li>The team will continue to work through the use cases and demos.</li></ul>]]></content:encoded>
             <category>log</category>
             <category>sprint</category>
         </item>
