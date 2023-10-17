@@ -3,11 +3,11 @@ id: define
 sidebar_position: 2
 title: Define
 ---
-Overview
+## Overview
 - [IT Helpdesk](#it-helpdesk)
 - [Consumer Finance](#consumer-finance)
 - [Human Resources](#human-resources)
-## IT Helpdesk<a name="it-helpdesk"></a>
+## **IT Helpdesk**<a name="it-helpdesk"></a>
 ### Vision
 
 ### Purpose
@@ -18,7 +18,7 @@ Overview
 
 ### Scope & Roadmap
 
-## Consumer Finance <a name="consumer-finance"></a>
+## **Consumer Finance** <a name="consumer-finance"></a>
 ### Vision
 
 ### Purpose
@@ -29,8 +29,9 @@ Overview
 
 ### Scope & Roadmap
 
-## Human Resources <a name="human-resource"></a>
+## **Human Resources** <a name="human-resource"></a>
 ### Vision
+
 ### Purpose
 
 ### Objectives
