@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[9756],{9172:e=>{e.exports=JSON.parse('{"permalink":"/solution-watsonx-assistant/blog/tags/log","page":1,"postsPerPage":10,"totalPages":1,"totalCount":7,"blogDescription":"Blog","blogTitle":"Journey Log"}')}}]);

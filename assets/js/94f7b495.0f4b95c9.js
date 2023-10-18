@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[3653],{174:s=>{s.exports=JSON.parse('{"permalink":"/solution-watsonx-assistant/blog/tags/sprint","page":1,"postsPerPage":10,"totalPages":1,"totalCount":7,"blogDescription":"Blog","blogTitle":"Journey Log"}')}}]);
