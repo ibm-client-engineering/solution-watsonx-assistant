@@ -1,7 +1,7 @@
 ---
-id: solution-prepare
+id: solution-prepare-core
 sidebar_position: 1
-title: Prepare
+title: Core Components
 ---
 
 ## Pre-Requisites
