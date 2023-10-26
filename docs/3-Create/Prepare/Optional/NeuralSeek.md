@@ -76,3 +76,6 @@ credentials for LLM
 1. Click on the "No action matches" action and delete the existing step 1 and step 2. 
 1. "New Step". In the "And then" section, select "go to a subaction"  -> select "NeuralSeek Search" in the dropdown options -> "Apply".
 1. "Save" and "Close"
+
+### References
+- [Integrate NeuralSeek with Watson Assistant and Watson Discovery](https://developer.ibm.com/tutorials/integrate-neuralseek-with-watson-assistant-and-watson-discovery/)
