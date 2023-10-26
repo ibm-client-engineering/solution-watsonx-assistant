@@ -21,7 +21,7 @@ title: Core Components
 1. Integrate Watson Assistant with [ServiceNow](/docs/3-Create/Prepare/Optional/ServiceNow.md)
 
 ## Step-by-Step Instructions
-
+### 0. Create a new Watson Assistant
 ### 1. Setup Watson Discovery<a name="setup-watson-discovery"></a>
 1. New projects, input Project Name, select an option "None of the above — I’m working on a custom project", click "Next"
 1. select "Web Crawl", click "Next"
@@ -33,13 +33,12 @@ title: Core Components
 
 ### 2. Setup WatsonX and integrate with Watson Discovery <a name="setup-WX-WD"></a>
 #### High-level Steps
-1. Create a new Watson Assistant
 1. [Create Watson Discovery custom extension](#2-create-watson-discovery-custom-extension)
 1. [Create WatsonX custom extension](#3-create-watsonx-custom-extension)
 1. [Configure WA action to integrate WatsonX Search using Watson Discovery](#4-configure-wa-action-to-integrate-watsonx-search-using-watson-discovery)
 1. [Customize WatsonX actions](#5-customize-watsonx-actions)
 
-#### 2. Create Watson Discovery custom extension<a name="2-create-watson-discovery-custom-extension"></a>
+#### 1. Create Watson Discovery custom extension<a name="2-create-watson-discovery-custom-extension"></a>
 1. In your assistant, navigate to "Integrations" page. 
 1. Click "Build custom extensions" -> click "Next" -> Input Extension name `Watson Discovery` -> click "Next"
 1. download json file: [watson-discovery-query-openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/watson-discovery/watson-discovery-query-openapi.json) and import file to WA
@@ -54,7 +53,7 @@ title: Core Components
 
 - Reference: [starter kit for accessing the IBM Watson Discovery v2 search API via a custom extension to IBM Watson Assistant](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/starter-kits/watson-discovery)
 
-#### 3. Create WatsonX custom extension <a name="3-create-watsonx-custom-extension"></a>
+#### 2. Create WatsonX custom extension <a name="3-create-watsonx-custom-extension"></a>
 1.  In your assistant, navigate to Integrations page, click "Build custom extension" -> click "Next" -> Input Extension name `watsonx` -> click "Next" .
 1. download json file: [watsonx-openapi.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-watsonx/watsonx-openapi.json) and import file to WA
 1. click "Next" -> click "Finish"
@@ -63,7 +62,7 @@ title: Core Components
     1. For Apikey, create and copy a new API key from [API key](https://cloud.ibm.com/iam/apikeys)
 1. Click "Next", click "Finish", click "Close"
 
-#### 4. Configure WA action to integrate WatsonX Search using Watson Discovery <a name="4-configure-wa-action-to-integrate-watsonx-search-using-watson-discovery"></a>
+#### 3. Configure WA action to integrate WatsonX Search using Watson Discovery <a name="4-configure-wa-action-to-integrate-watsonx-search-using-watson-discovery"></a>
 Upload Actions:
 1. Download [discovery-watsonx-actions.json](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-conversational-search/discovery-watsonx-actions.json)
 1. Navigate to "Actions" page, click "Global Settings" icon on the upper right corner
@@ -78,7 +77,7 @@ Upload Actions:
     :::
 4. You're all set. Navigate to "Preview" to test the integration!
 
-#### 5. Customize WatsonX actions
+#### 4. Customize WatsonX actions
 ##### Add source link to response
 1. To add source link to the response, We need to configure two actions.
     1.  Navigate to "Seach" action

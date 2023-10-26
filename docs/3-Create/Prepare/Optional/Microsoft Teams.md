@@ -8,6 +8,9 @@ title: Microsoft Teams
 - Microsoft admin account
 #### High level Steps
 1. [Create Microsoft Teams custom extension](#create-microsoft-teams-custom-extension)
+    1. App registration
+    1. Create your bot
+    1. Create your Teams app
 1. [Export MS Teams App and import to MS Teams Platform](#import-bot-into-microsoft-teams)
 
 ### Create Microsoft Teams custom extension <a name="create-microsoft-teams-custom-extension"></a>
