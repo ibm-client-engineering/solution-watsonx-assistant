@@ -14,13 +14,10 @@ title: Core Components
 ## High-level Steps to develop working solution
 1. [Setup Watson Discovery](#setup-watson-discovery)
 1. Options
-    1. [Setup NeuralSeek Lite and integrate with Watson Discovery](#setup-NS-WD)
-    1. [Setup NeuralSeek WatsonX version](#setup-NS-WX)
     1. [**Setup WatsonX and integrate with Watson Discovery**](#setup-WX-WD)
+    1. [Setup NeuralSeek Lite and integrate with Watson Discovery](/docs/3-Create/Prepare/Optional/NeuralSeek.md)
+    1. [Setup NeuralSeek WatsonX version](/docs/3-Create/Prepare/Optional/NeuralSeek.md)
 3. [Setup Watson Assistant](#3-setup-watson-assistant)
-4. [Create NeuralSeek custom extension](#4-create-neuralseek-custom-extension)
-5. [Create WA action to trigger NeuralSeek Search](#5-create-wa-action-to-trigger-neuralseek-search)
-
 
 
 ### Integrate Watson Assistant with Microsoft Teams 
@@ -42,44 +39,7 @@ title: Core Components
 1. Select data source
 1. If webcrawl, input url links to "Starting URLs" and click "Add" -> Finish
 
-### 2.1 Setup NeuralSeek and integrate with Watson Discovery<a name="setup-NS-WD"></a>
-
-1. Click on the "Launch NeuralSeek" button.
-1. You'll land on the "Configure" tab. 
-1. Enter the name of the company or organization that NeuralSeek will be generating answers for. Click "Next"
-1. Input Watson Discovery KnowledgeBase details. Test connection by clicking "Test". Once tested, click "Next".
-    :::info
-    **Where to get credentials**
-    - **Discovery Service Url**: within IBM Cloud -> resource list -> Watson Discovery Instance -> Manage -> Credentials
-    - **Discovery API Key**: within IBM Cloud -> resource list -> Watson Discovery Instance -> Manage -> Credentials
-    - **Discovery Project ID**: within Watson Discovery: Upper left Hamburger icon -> Integrate and deploy -> 
-    API Information
-    :::
-1. For Virtual Agent Type, select "Watson Assistant Type". Click "Next". Click "Next". 
-1. Navigate to "Seek" tab. Test NeuralSeek with e.g. "What products or services do you offer?"
-
-### 2.1.1 For NeuralSeek + WatsonX.ai version <a name="setup-NS-WX"></a>
-credentials for LLM
-- LLM API Key: 
-    - Go to [IBM Cloud API Keys](https://cloud.ibm.com/iam/apikeys)
-    - Create -> Enter Name -> Copy
-- LLM Endpoint
-    - Go to [WatsonX Platform](https://dataplatform.cloud.ibm.com/wx/home?context=wx)
-    - Prompt Lab -> View code (Right hand side, to the right of Model) -> Copy the API endpoint after `curl`
-        ```
-        https://us-south.ml.cloud.ibm.com/ml/v1-beta/generation/text?version=2023-05-29
-        ```
-- LLM Project ID: 
-    - Go to [WatsonX Platform](https://dataplatform.cloud.ibm.com/wx/home?context=wx)
-    - Projects -> Manage -> General -> Details -> Project ID
-    - If project doesn't exist:
-        - New Project -> Create an empty project -> Input Name -> Select storage service -> Create
-        - Navigate within Project -> Manage -> Services & integrations
-        - Click "Associate Service" -> Select services with type "Watson Machine Learning" -> click "Associate"
-        - Navigate to General tab -> Details -> copy Project ID
-    
-
-### 2.2 Setup WatsonX and integrate with Watson Discovery <a name="setup-WX-WD"></a>
+### 2. Setup WatsonX and integrate with Watson Discovery <a name="setup-WX-WD"></a>
 #### High-level Steps
 1. Create a new Watson Assistant
 1. [Create Watson Discovery custom extension](#2-create-watson-discovery-custom-extension)
@@ -164,33 +124,6 @@ Upload Actions:
     - Home screen: cusomize conversation starters
 1. We can customize the preview background to match any organization homepage by "Change background" -> "Enter Url" option -> "Continue" -> Enter website url.
 
-
-### 4. Create NeuralSeek custom extension <a name="4-create-neuralseek-custom-extension"></a>
-1. In Watson Assistant, on the "Integrations" tab of Watson Assistant, click "Build Custom Extension" then "Next".
-2. Name the extension "NeuralSeek" and give a brief description. Click "Next".
-3. Open another browser tab and navigate to NeuralSeek -> "Integrate" tab -> Download "Custom Extension OpenApi File".
-4. Navigate to Watson Assitant browser tab. Upload NeuralSeek OpenApi file into Waston Assiatant. Click "Next" then "Finish".
-5. On the new "NeuralSeek" extension tile that appears, click "Add", "Add", then "Next".
-6. On the authentication screen, select "API key auth", and enter your api key as shown in NeuralSeek "Integrate" page.
-7. Click "Next", "Finish", then "Close".
-
-
-
-### 5. Create WA action to trigger NeuralSeek Search <a name="5-create-wa-action-to-trigger-neuralseek-search"></a>
-1. On the "Actions" tab of Watson Assistant, click "Create Action". Choose "Quick Start with templates", then select  "NeuralSeek Starter Kit" -> "Select this starter kit" -> "Add templatess".
-1. Open the "NeuralSeek Search" action.
-1. In step 3, in the "And then" section, click "edit extension", 
-    - in the Extension dropdown select "NeuralSeek"
-    - in the Operation dropdown select "Seek an answer from NeuralSeek".
-1. Set parameters. 
-    - Set `question` To `query_text`. 
-    - Set `options.language` to Enter text ->  `"en"` -> "Apply"
-1. "Save" and "Close" action
-#### No action matches Setup
-1. Navigate to "All items" -> "Set by assistant" -> "No action matches".
-1. Click on the "No action matches" action and delete the existing step 1 and step 2. 
-1. "New Step". In the "And then" section, select "go to a subaction"  -> select "NeuralSeek Search" in the dropdown options -> "Apply".
-1. "Save" and "Close"
 
 ### Create Microsoft Teams custom extension <a name="create-microsoft-teams-custom-extension"></a>
 1. Navigate to "Integrations" tab. Within Channels section, find "Microsoft Teams" and click "Add", and "Add".
