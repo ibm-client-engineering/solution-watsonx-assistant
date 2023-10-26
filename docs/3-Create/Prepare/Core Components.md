@@ -9,14 +9,13 @@ title: Core Components
 - Access to an instance of Watson Discovery
 - Access to WatsonX platform
 - Access to an instance of Watson Machine Learning
-- Access to a NeuralSeek plan (for NeuralSeek integration only)
+- Access to a NeuralSeek plan (for [NeuralSeek](/docs/3-Create/Prepare/Optional/NeuralSeek.md) integration only)
 
 ## High-level Steps to develop working solution
 1. [Setup Watson Discovery](#setup-watson-discovery)
 1. Options
     1. [**Setup WatsonX and integrate with Watson Discovery**](#setup-WX-WD)
-    1. [Setup NeuralSeek Lite and integrate with Watson Discovery](/docs/3-Create/Prepare/Optional/NeuralSeek.md)
-    1. [Setup NeuralSeek WatsonX version](/docs/3-Create/Prepare/Optional/NeuralSeek.md)
+    1. [Setup NeuralSeek Lite or Lite-WatsonX and integrate with Watson Discovery](/docs/3-Create/Prepare/Optional/NeuralSeek.md)
 3. [Setup Watson Assistant](#3-setup-watson-assistant)
 
 
