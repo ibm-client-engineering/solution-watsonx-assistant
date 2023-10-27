@@ -85,6 +85,7 @@ credentials for LLM
     - Enter `When possible, answer the question in bulleted list form.`
 - Enabled **Searching in different collections**
     - in the Watson Assistant action step where we call out to use NeuralSeek extension, set parameters *options.filter* To `collection_id:"<collection-id>"`
+    - collection-id could be found in Watson Discovery: navigate to a collection and copy the url after `collections/`
 
 ### References
 - [Integrate NeuralSeek with Watson Assistant and Watson Discovery](https://developer.ibm.com/tutorials/integrate-neuralseek-with-watson-assistant-and-watson-discovery/)
