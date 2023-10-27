@@ -11,6 +11,7 @@ title: NeuralSeek
 - [Lite-WatsonX](#setup-NS-watsonx)
 - [Create NeuralSeek custom extension](#create-neuralseek-custom-extension)
 - [Create WA action to trigger NeuralSeek Search](#create-wa-action-to-trigger-neuralseek-search)
+- [NeuralSeek Advanced Features](#neuralseek-advanced-features)
 
 ### Setup NeuralSeek and integrate with Watson Discovery<a name="setup-NS-lite"></a>
 
@@ -76,6 +77,14 @@ credentials for LLM
 1. Click on the "No action matches" action and delete the existing step 1 and step 2. 
 1. "New Step". In the "And then" section, select "go to a subaction"  -> select "NeuralSeek Search" in the dropdown options -> "Apply".
 1. "Save" and "Close"
+
+### NeuralSeek Advanced Features<a name="neuralseek-advanced-features"></a>
+- Enabled **Topic Continuity** through setting up session_id in WA: in the action step where we call out to use NeuralSeek extension, set parameters `user_session.system.session` To Text `context.system.session_id`
+- Enabled **Consistent Answer Format** in through prompt Engineering
+    - Within NeuralSeek: navitage to Configure > prompt engineering > Enabled
+    - Enter `When possible, answer the question in bulleted list form.`
+- Enabled **Searching in different collections**
+    - in the Watson Assistant action step where we call out to use NeuralSeek extension, set parameters *options.filter* To `collection_id:"<collection-id>"`
 
 ### References
 - [Integrate NeuralSeek with Watson Assistant and Watson Discovery](https://developer.ibm.com/tutorials/integrate-neuralseek-with-watson-assistant-and-watson-discovery/)
