@@ -18,7 +18,7 @@ title: Core Components
     1. [Create WatsonX custom extension](#3-create-watsonx-custom-extension)
     1. [Configure WA action to integrate WatsonX Search using Watson Discovery](#4-configure-wa-action-to-integrate-watsonx-search-using-watson-discovery)
 1. [Setup Watson Assistant](#3-setup-watson-assistant)
-1. [WatsonX Customization](#customize-watsonx-actions)
+1. [WatsonX Customization](#4-watsonx-customization)
     - Add source link to response
     - Configure model response by customizing prompt
 
@@ -99,7 +99,7 @@ title: Core Components
 1. We can customize the preview background to match any organization homepage by "Change background" -> "Enter Url" option -> "Continue" -> Enter website url.
 
 ------------------------
-### 4. WatsonX Customization<a name="wx-customization"></a>
+### 4. WatsonX Customization<a name="4-watsonx-customization"></a>
 #### Add source link to response
 1. To add source link to the response, We need to configure two actions.
     1.  Navigate to "Seach" action
@@ -111,6 +111,17 @@ title: Core Components
         - In step 10, in bottom of the 'Assistant says' text box, type
         `For more information, click $source_url`, Enter. 
         - Save, and Close.
+
+#### Filter confidence score from Watson Discovery
+1. To access the confidence score of source link from watson discovery, we used expression such as`${step_474_result_2}.body.results[0].result_metadata.confidence`
+1. We recommend setting a variable `confidence_score` to be used as a filter
+    1.  Navigate to "Seach" action
+        - step 5, click "set new value" within the set variable values section.
+        - click "New session variable" from the dropdown, input Name `confidence_score`, select `Number` for Type, click "Apply".
+        - in the text box after 'To', select "Expression" from dropdown, and input for example `${step_474_result_2}.body.results[0].result_metadata.confidence`. Click "Apply".
+        - Save, and Close.
+    2.  We could start setting conditions using `confidence_score` variable.
+
 #### Configure model response by customizing prompt
 1. When a user prompt Watson Assistant with keywords such as "answer in bullet points", we would like the model to output in bullet points format. This requires additional configuration in the "Generate Answer" actions.
     1. Navigate to "Generate Answer" action
