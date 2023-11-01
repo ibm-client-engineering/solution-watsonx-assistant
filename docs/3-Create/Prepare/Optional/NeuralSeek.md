@@ -79,13 +79,18 @@ credentials for LLM
 1. "Save" and "Close"
 
 ### NeuralSeek Advanced Features<a name="neuralseek-advanced-features"></a>
-- Enabled **Topic Continuity** through setting up session_id in WA: in the action step where we call out to use NeuralSeek extension, set parameters `user_session.system.session` To Text `context.system.session_id`
-- Enabled **Consistent Answer Format** in through prompt Engineering
-    - Within NeuralSeek: navitage to Configure > prompt engineering > Enabled
-    - Enter `When possible, answer the question in bulleted list form.`
+- Enabled **Topic Continuity** through setting up session_id in WA: in the action step where we call out to use NeuralSeek extension, set parameters `user_session.system.session` To Expression `$system.session_id`
+- Prompt Engineering:
+    1. Enabled **Consistent Answer Format** in through 
+        - Within NeuralSeek: navitage to Configure > prompt engineering > Enabled
+        - Enter `When possible, answer the question in bulleted list form.`
+    2. Lower variance 
 - Enabled **Searching in different collections**
     - in the Watson Assistant action step where we call out to use NeuralSeek extension, set parameters *options.filter* To `collection_id:"<collection-id>"`
     - collection-id could be found in Watson Discovery: navigate to a collection and copy the url after `collections/`
+- Enable **multilingual capability**: set parameters *options.language*
+    - Spanish: `es`
+    - Match input: `xx`
 
 ### References
 - [Integrate NeuralSeek with Watson Assistant and Watson Discovery](https://developer.ibm.com/tutorials/integrate-neuralseek-with-watson-assistant-and-watson-discovery/)
