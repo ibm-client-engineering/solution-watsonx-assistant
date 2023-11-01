@@ -137,6 +137,10 @@ title: Core Components
         ("<s>[INST] <<SYS>>\nYou are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe. Be brief in your answers. Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.\n\nIf a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don’t know the answer to a question, please don’t share false information.\n<</SYS>>\n\nGenerate the next agent response in bullet points by answering the question. You are provided several documents with titles. If the answer comes from different documents please mention all possibilities and use the titles of documents to separate between topics or domains. If you cannot base your answer on the given documents, please state that you do not have an answer.\n\n").concat(${passages}).concat("\n\n").concat(${query_text}).concat("[/INST]")```
         - ![Customize WatsonX Prompt](https://github.com/ibm-client-engineering/solution-ithelpdesk-watsonx/tree/main/docs/3-Create/Customize_WatsonX_Prompt.png)
         
+#### Inactivity timeout
+- In Watson Assistant, navigate to Environments.
+- Click on the "Settings" icon next to Draft environment
+- Navigate to "Inactivity timeout" to set the timeout limit
 ------------------------
 ## References
 - [Language Model Conversational Search starter kit](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/starter-kits/language-model-conversational-search)
